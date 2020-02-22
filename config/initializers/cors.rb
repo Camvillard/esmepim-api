@@ -19,8 +19,13 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
+  url = Rails.env == "development" ? 'http://localhost:3000' : "https://esmepim-dev.netlify.com/"
+  Rails.logger.degub  "========= URL =========="
+  Rails.logger.degub  "========= url : #{url} =========="
+  Rails.logger.degub  "========= URL =========="
+
   allow do
-    origins Rails.env == "development" ? 'http://localhost:3000' : "https://esmepim-dev.netlify.com/"
+    origins url
 
     resource '*',
       headers: :any,
