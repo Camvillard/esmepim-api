@@ -6,7 +6,7 @@
 <div class="recu-container">
   <h3><span>reçu de commande</span></h3>
   <p>envoyé à : <%= @email %></p>
-  <p>montant total de la commande : <%= @amount %> $CAD</p>
+  <p>montant total de la commande : <%= humanized_money_with_symbol(@amount.price) %> $CAD</p>
   <p>payé le : <%= @order.created_at.strftime("%d/%m/%Y") %> </p>
 </div>
 
