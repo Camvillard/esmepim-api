@@ -1,12 +1,12 @@
 <h1>voici le livre de recettes !</h1>
 
-<p>vous trouverez sur <a href="https://res.cloudinary.com/camvillard/image/upload/v1582398670/esmepim/Esmepim_le_book.pdf" target="_blank">ce lien</a> le livre de recettes en PDf à télécharger.</p>
+<p>vous trouverez sur <a href="https://res.cloudinary.com/camvillard/image/upload/v1582398670/esmepim/Esmepim_le_book.pdf" class="mail-link" target="_blank">ce lien</a> le livre de recettes en PDf à télécharger.</p>
 
 
 <div class="recu-container">
   <h3><span>reçu de commande</span></h3>
   <p>envoyé à : <%= @email %></p>
-  <p>montant total de la commande : <%= humanized_money_with_symbol(@amount.price) %> $CAD</p>
+  <p>montant total de la commande : <%= humanized_money_with_symbol(@amount) %></p>
   <p>payé le : <%= @order.created_at.strftime("%d/%m/%Y") %> </p>
 </div>
 
