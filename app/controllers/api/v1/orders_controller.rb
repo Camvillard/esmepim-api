@@ -12,7 +12,7 @@ class Api::V1::OrdersController < ApplicationController
 
   def create
     @order = Order.new
-    @order.email = params[:order][:user_email]
+    @order.email = params[:order][:user_email].strip
     @order.quantity = 1
 
     @product = Product.find_by(name: 'livre de recettes')
